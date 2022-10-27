@@ -53,7 +53,7 @@ struct Tile: View {
         .padding(25.0)
         .frame(width: 120.0)
         .buttonStyle(.plain)
-        .background(.white)
+        .background(.background)
         .font(.system(size: 75))
         .fontWeight(.bold)
     }
@@ -112,7 +112,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .background(.black)
+            .background(.foreground)
             .aspectRatio(1.0, contentMode: .fill)
         }
         .alert(isPresented: $isGameOver) {
