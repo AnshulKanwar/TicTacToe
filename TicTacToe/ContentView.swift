@@ -44,9 +44,11 @@ struct Tile: View {
     
     var body: some View {
         Button(LocalizedStringKey.init(String(marker ?? " "))) {
-            marker = player
-            player = player == "X" ? "O" : "X"
-            handleWinner()
+            if marker == nil {
+                marker = player
+                player = player == "X" ? "O" : "X"
+                handleWinner()
+            }
         }
         .padding(25.0)
         .frame(width: 120.0)
